@@ -100,3 +100,20 @@ def test_token_cap_blocks_a_case_before_any_prediction(tmp_path, monkeypatch):
     monkeypatch.setattr(budget, "run_case", forbidden)
     with pytest.raises(RuntimeError, match="1.1-million"):
         budget.run_budget(tmp_path)
+
+
+def test_nonnegative_sigmoid_matches_sklearn_and_never_inverts():
+    from sklearn.linear_model import LogisticRegression
+
+    from src.learning_curve_protocol import logit
+    from src.learning_curve_recalibration import fit_sigmoid
+    rng = np.random.default_rng(0)
+    y = rng.integers(0, 2, 80)
+    informative = np.clip(.3 + .4 * y + rng.normal(0, .15, 80), .01, .99)
+    reference = LogisticRegression(C=1., tol=1e-10, max_iter=10000).fit(logit(informative), y)
+    np.testing.assert_allclose(fit_sigmoid(informative, y, nonnegative=True),
+                               [reference.coef_[0, 0], reference.intercept_[0]], atol=1e-6)
+    anti = 1 - informative
+    assert fit_sigmoid(anti, y, nonnegative=False)[0] < 0
+    slope, intercept = fit_sigmoid(anti, y, nonnegative=True)
+    assert slope == 0 and np.isclose(intercept, np.log(y.mean() / (1 - y.mean())))
