@@ -1,0 +1,41 @@
+{
+  "complete": true,
+  "protocol_id": "38eb9ea63b87ca137237",
+  "amendment_id": "4e13adae49b618e437aa",
+  "final_runs": 600,
+  "metric_rows": 900,
+  "preprocessing_matrices_reconstructed": 800,
+  "disjoint_inner_folds": 300,
+  "candidate_fold_scores_recomputed": 6225,
+  "paired_intervals_recomputed": 60,
+  "nested_sizes": [
+    50,
+    100,
+    200,
+    500,
+    "Full"
+  ],
+  "matched_seeds": [
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48,
+    49,
+    50,
+    51
+  ],
+  "calibration_reconstructed": true,
+  "no_extra_training_labels": true,
+  "calibration_seeds": [
+    42,
+    43,
+    44,
+    45,
+    46
+  ],
+  "additional_tokens_after_amendment": 1000000,
+  "verifier_sha256": "5759fdea98dc02b40d2c67c8132e26a56a22d1359f40f97b2bbcf9baab44b427"
+}

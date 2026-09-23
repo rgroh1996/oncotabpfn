@@ -1,0 +1,10 @@
+{
+  "complete": true,
+  "protocol_id": "38eb9ea63b87ca137237",
+  "logistic_fits_independently_reproduced": 1300,
+  "maximum_probability_difference": 2.942091015256665e-15,
+  "sigmoid_fits_independently_reproduced": 575,
+  "maximum_calibrated_probability_difference": 0.0,
+  "method": "Reproducible sklearn refits; independent einsum probability and L2-objective gradient checks; gradient infinity norm below 1.1e-4",
+  "probabilities_unchanged": true
+}

@@ -1,0 +1,35 @@
+{
+  "protocol_id": "38eb9ea63b87ca137237",
+  "calibration_seeds": [
+    42,
+    43,
+    44,
+    45,
+    46
+  ],
+  "discrimination_seeds": [
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48,
+    49,
+    50,
+    51
+  ],
+  "max_additional_tokens": 1100000,
+  "estimated_tokens_per_predict": 10000,
+  "expected_final_runs": 600,
+  "expected_raw_metric_rows": 600,
+  "expected_calibrated_metric_rows": 300,
+  "reason": "User requested lower token use because the API limit cannot be raised. No performance results were used to choose seeds.",
+  "rule": "Retain ten matched draws for raw discrimination; report calibration only on fixed seeds 42-46 for every model and endpoint. Preserve surplus completed calibration predictions as audit records, excluded from the matched calibration summary.",
+  "implementation_sha256": "777f3af222bfdbac9bd01ff1f9e48f0d9d6ebc0738c81c0a906afc003275b73d",
+  "amendment_id": "4e13adae49b618e437aa",
+  "amended_utc": "2026-09-22T09:28:32.283066+00:00",
+  "completed_tabpfn_runs_before_amendment": 56,
+  "remaining_predict_calls": 100,
+  "estimated_remaining_tokens": 1000000
+}
