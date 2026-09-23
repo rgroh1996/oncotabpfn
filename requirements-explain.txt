@@ -1,0 +1,4 @@
+# Add to the pinned paper environment; preserves its original core versions.
+-r requirements-paper.txt
+shap==0.50.0
+pytest>=8

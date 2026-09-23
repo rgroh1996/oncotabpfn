@@ -1,0 +1,4 @@
+-r requirements-paper.txt
+lightgbm==4.7.0
+xgboost==3.4.1
+pytest>=8

@@ -1,0 +1,53 @@
+# Environments and secrets
+.venv/
+.venv-paper/
+.env
+.streamlit/secrets.toml
+
+# Caches
+__pycache__/
+.pytest_cache/
+.ruff_cache/
+.matplotlib/
+.DS_Store
+*.log
+
+# Data: downloaded or derived locally, never committed
+data/raw/
+data/paper/
+data/*.parquet
+data/*report.json
+
+# Authors' frozen code: cloned locally at the pinned commit (see README)
+vendor/
+
+# Results stay local; only reports, figures and summary tables are published
+results/**
+!results/**/
+!results/**/REPORT.md
+!results/findings.md
+!results/**/*.png
+!results/**/summary.csv
+!results/**/paired_comparisons.csv
+!results/**/calibration_summary.csv
+!results/**/summary_small_n.csv
+!results/**/cv_summary.csv
+!results/**/cv_metrics.csv
+!results/**/test_summary.csv
+!results/**/feature_importance.csv
+!results/**/modality_permutation.csv
+!results/**/verification.json
+!results/**/numerical_verification.json
+# Small files the dashboard's saved-results views read, so a fresh clone can display them
+!results/metrics.csv
+!results/manifest.json
+!results/**/status.json
+!results/learning_curves/quota_amendment.json
+!results/learning_curves/metrics.csv
+!results/paper/metrics.csv
+!results/optimization/explanations/*/summary.json
+!results/optimization/explanations/*/protocol.json
+!results/optimization/explanations/*/shap_values.csv
+
+# Demo video: upload to a video host and link it; too large to embed from the repo
+demo/
