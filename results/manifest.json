@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "source": "real",
+  "data_hash": "a8e5a64e1cebc1f55334",
+  "code_hash": "beecc9860aff14b53996",
+  "versions": {
+    "tabpfn-client": "0.6.0",
+    "lightgbm": "4.7.0",
+    "xgboost": "3.4.1",
+    "scikit-learn": "1.9.0",
+    "pandas": "2.3.3",
+    "numpy": "2.5.3"
+  },
+  "split": "official",
+  "sizes": [
+    "50",
+    "100",
+    "200",
+    "500",
+    "Full"
+  ],
+  "seeds": [
+    42,
+    43,
+    44,
+    45,
+    46
+  ],
+  "models": [
+    "tabpfn",
+    "lightgbm",
+    "xgboost"
+  ],
+  "targets": [
+    "target_survival_5y",
+    "target_recurrence"
+  ],
+  "pca_components": 16,
+  "status_counts": {
+    "complete": 135,
+    "skipped": 15
+  },
+  "comparison_complete": true,
+  "completed_models": [
+    "lightgbm",
+    "tabpfn",
+    "xgboost"
+  ]
+}
