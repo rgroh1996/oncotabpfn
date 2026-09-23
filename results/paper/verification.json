@@ -1,0 +1,9 @@
+{
+  "protocol_id": "6b092e8b8a9439e46cf6",
+  "completed_runs": 90,
+  "metrics_recomputed": true,
+  "patient_alignment_and_disjointness": true,
+  "matrix_hashes_match": true,
+  "published_auc_rounding_matches": 6,
+  "paired_differences_verified": 12
+}
