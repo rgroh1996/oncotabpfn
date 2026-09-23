@@ -1,0 +1,24 @@
+{
+  "protocol_id": "87fde2d4a0c3c11c730b",
+  "all_36_metrics_recomputed": true,
+  "folds_exclude_official_test": true,
+  "both_selections_frozen_before_tests": true,
+  "selected_models_match_validation_ranking": true,
+  "saved_models_match_selection": true,
+  "training_only_shap_background": true,
+  "held_out_explained_patients": true,
+  "explanations": [
+    {
+      "target": "survival_status",
+      "patients": 12,
+      "max_additivity_error": 3.0338764190673828e-05,
+      "ordering_rank_spearman": 0.980701754385965
+    },
+    {
+      "target": "recurrence",
+      "patients": 12,
+      "max_additivity_error": 4.1425228118896484e-05,
+      "ordering_rank_spearman": 0.975438596491228
+    }
+  ]
+}

@@ -1,0 +1,92 @@
+{
+  "explanation_id": "0a2cc7831ddc18145628",
+  "target": "recurrence",
+  "model": "native_clinical_pathology",
+  "complete": true,
+  "explained_patients": 12,
+  "background_patients": 8,
+  "patient_ids": [
+    "124",
+    "142",
+    "153",
+    "246",
+    "258",
+    "328",
+    "398",
+    "400",
+    "458",
+    "521",
+    "528",
+    "674"
+  ],
+  "event": "Recurrence",
+  "feature_count": 19,
+  "max_additivity_error": 4.1425228118896484e-05,
+  "max_reload_prediction_drift": 0.0,
+  "base_probability": 0.2110008243471384,
+  "ordering_rank_spearman": 0.975438596491228,
+  "top10_ordering_overlap": 9,
+  "mean_absolute_ordering_difference": 0.0013377229548304488,
+  "api_calls_this_invocation": 56,
+  "api_rows_this_invocation": 9578,
+  "top_features": [
+    {
+      "feature": "primarily_metastasis",
+      "mean_absolute_shap": 0.04745717481515991,
+      "mean_signed_shap": 0.04745717481515991
+    },
+    {
+      "feature": "vascular_invasion_V",
+      "mean_absolute_shap": 0.02905677808060621,
+      "mean_signed_shap": -0.02905677808060621
+    },
+    {
+      "feature": "hpv_association_p16",
+      "mean_absolute_shap": 0.01389860196892793,
+      "mean_signed_shap": -0.0026106838098106286
+    },
+    {
+      "feature": "perinodal_invasion",
+      "mean_absolute_shap": 0.013369760505156592,
+      "mean_signed_shap": -0.002730939236547177
+    },
+    {
+      "feature": "infiltration_depth_in_mm",
+      "mean_absolute_shap": 0.012230449685982117,
+      "mean_signed_shap": 0.0035789381557454667
+    },
+    {
+      "feature": "perineural_invasion_Pn",
+      "mean_absolute_shap": 0.011527176422532648,
+      "mean_signed_shap": -0.0038423000175195434
+    },
+    {
+      "feature": "number_of_positive_lymph_nodes",
+      "mean_absolute_shap": 0.010630194214172661,
+      "mean_signed_shap": -0.0008263891795650125
+    },
+    {
+      "feature": "smoking_status",
+      "mean_absolute_shap": 0.008288737396166349,
+      "mean_signed_shap": 0.006773962338532631
+    },
+    {
+      "feature": "pN_stage",
+      "mean_absolute_shap": 0.006843399450493355,
+      "mean_signed_shap": -0.0008868922595866024
+    },
+    {
+      "feature": "grading",
+      "mean_absolute_shap": 0.006024822301696986,
+      "mean_signed_shap": -0.0003930305829271674
+    }
+  ],
+  "caveats": [
+    "SHAP ranking summarizes a small held-out sample, not the entire cohort.",
+    "Background consists of a small random training sample; rankings may change with background or seed.",
+    "Categorical values are the published encoded values; one-hot indicators are never masked separately.",
+    "Marginal masking and modality shuffling can break cross-feature correlations.",
+    "These are model attributions, not causal effects or treatment recommendations.",
+    "No feature was selected or removed using these held-out explanations."
+  ]
+}

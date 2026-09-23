@@ -1,0 +1,92 @@
+{
+  "explanation_id": "525ea64097da9a4445c3",
+  "target": "survival_status",
+  "model": "native_clinical_pathology",
+  "complete": true,
+  "explained_patients": 12,
+  "background_patients": 8,
+  "patient_ids": [
+    "116",
+    "135",
+    "153",
+    "246",
+    "258",
+    "308",
+    "374",
+    "389",
+    "447",
+    "498",
+    "521",
+    "660"
+  ],
+  "event": "Death status",
+  "feature_count": 19,
+  "max_additivity_error": 3.0338764190673828e-05,
+  "max_reload_prediction_drift": 0.0,
+  "base_probability": 0.12626941362395883,
+  "ordering_rank_spearman": 0.980701754385965,
+  "top10_ordering_overlap": 9,
+  "mean_absolute_ordering_difference": 0.0016402159215016454,
+  "api_calls_this_invocation": 56,
+  "api_rows_this_invocation": 9415,
+  "top_features": [
+    {
+      "feature": "primarily_metastasis",
+      "mean_absolute_shap": 0.021966818409661453,
+      "mean_signed_shap": 0.021966818409661453
+    },
+    {
+      "feature": "perinodal_invasion",
+      "mean_absolute_shap": 0.014182458272747075,
+      "mean_signed_shap": 0.0007274085170744607
+    },
+    {
+      "feature": "pN_stage",
+      "mean_absolute_shap": 0.013477398805359067,
+      "mean_signed_shap": -0.00929187732496454
+    },
+    {
+      "feature": "smoking_status",
+      "mean_absolute_shap": 0.013006501680744501,
+      "mean_signed_shap": 0.011332615089486353
+    },
+    {
+      "feature": "histologic_type",
+      "mean_absolute_shap": 0.010310010897228494,
+      "mean_signed_shap": 0.0009302013301445792
+    },
+    {
+      "feature": "hpv_association_p16",
+      "mean_absolute_shap": 0.010272692243840234,
+      "mean_signed_shap": 0.005576194540481083
+    },
+    {
+      "feature": "primary_tumor_site",
+      "mean_absolute_shap": 0.007588564195126916,
+      "mean_signed_shap": -0.0005834470600044975
+    },
+    {
+      "feature": "perineural_invasion_Pn",
+      "mean_absolute_shap": 0.007272868189223421,
+      "mean_signed_shap": 0.0012466027352881308
+    },
+    {
+      "feature": "pT_stage",
+      "mean_absolute_shap": 0.006825803609293264,
+      "mean_signed_shap": 0.00403529262500039
+    },
+    {
+      "feature": "infiltration_depth_in_mm",
+      "mean_absolute_shap": 0.006629580258352992,
+      "mean_signed_shap": 0.0033732792508089915
+    }
+  ],
+  "caveats": [
+    "SHAP ranking summarizes a small held-out sample, not the entire cohort.",
+    "Background consists of a small random training sample; rankings may change with background or seed.",
+    "Categorical values are the published encoded values; one-hot indicators are never masked separately.",
+    "Marginal masking and modality shuffling can break cross-feature correlations.",
+    "These are model attributions, not causal effects or treatment recommendations.",
+    "No feature was selected or removed using these held-out explanations."
+  ]
+}
