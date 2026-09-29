@@ -37,7 +37,7 @@ def prepare_amendment(output=OUTPUT):
                     discrimination_seeds=list(SEEDS), max_additional_tokens=MAX_ADDITIONAL_TOKENS,
                     estimated_tokens_per_predict=TOKEN_COST_PER_CALL,
                     expected_final_runs=600, expected_raw_metric_rows=600, expected_calibrated_metric_rows=300,
-                    reason="User requested lower token use because the API limit cannot be raised. No performance results were used to choose seeds.",
+                    reason="Reduced token use to stay within the fixed API allowance. No performance results were used to choose seeds.",
                     rule="Retain ten matched draws for raw discrimination; report calibration only on fixed seeds 42-46 for every model and endpoint. Preserve surplus completed calibration predictions as audit records, excluded from the matched calibration summary.",
                     implementation_sha256=file_hash(ROOT / "src/learning_curve_budget.py"))
     if path.exists():

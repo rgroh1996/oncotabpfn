@@ -2,7 +2,7 @@
 
 Completed 600 final model evaluations: two endpoints × five sizes × ten matched draws × six pipelines.
 
-**Quota amendment:** at the user's request, calibration is evaluated on fixed seeds 42–46 for every model and endpoint. All ten seeds remain in the primary raw-AUC comparison. Previously computed extra calibration predictions are retained locally but excluded from matched calibration summaries. The change was driven by API allowance, not model scores. See quota_amendment.json.
+**Quota amendment:** to stay within our API allowance, calibration is evaluated on fixed seeds 42–46 for every model and endpoint. All ten seeds remain in the primary raw-AUC comparison. Previously computed extra calibration predictions are retained locally but excluded from matched calibration summaries. The seeds were fixed in advance and chosen without looking at model scores. See quota_amendment.json.
 
 Primary comparison: mean raw ROC-AUC over N=50,100,200, with equal weight for each size and seed. Positive differences favor TabPFN. Intervals are paired, class-stratified test-patient bootstrap intervals conditional on the fixed training draws, unadjusted across comparisons. This is exploratory.
 

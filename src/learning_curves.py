@@ -93,10 +93,10 @@ def _report(output=OUTPUT):
             "conditional on the fixed training draws, unadjusted across comparisons. This is exploratory.", "",
             "| Endpoint | Comparator | AUC difference | 95% interval |", "|---|---|---:|---:|"]
     if amendment:
-        text[4:4] = ["**Quota amendment:** at the user's request, calibration is evaluated on fixed seeds 42–46 "
+        text[4:4] = ["**Quota amendment:** to stay within our API allowance, calibration is evaluated on fixed seeds 42–46 "
                      "for every model and endpoint. All ten seeds remain in the primary raw-AUC comparison. "
                      "Previously computed extra calibration predictions are retained locally but excluded from matched calibration summaries. "
-                     "The change was driven by API allowance, not model scores. See quota_amendment.json.", ""]
+                     "The seeds were fixed in advance and chosen without looking at model scores. See quota_amendment.json.", ""]
     for r in primary.to_dict("records"):
         text.append(f"| {ENDPOINTS[r['target']]} | {LABELS[r['reference']]} | {r['auc_difference']:+.4f} | [{r['ci_low']:+.4f}, {r['ci_high']:+.4f}] |")
     text += ["", "## Mean raw AUC by training size", "", "| Endpoint | N | " + " | ".join(LABELS.values()) + " |",
